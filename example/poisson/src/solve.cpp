@@ -7,7 +7,7 @@
 
 
 // PETSc
-# include <petsctime.h>
+#include <petscsys.h>
 
 // prototypes
 # include "solve.hpp"
