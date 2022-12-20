@@ -61,6 +61,7 @@ find_package(PkgConfig REQUIRED)
 find_package(Doxygen)
 find_package(MPI REQUIRED)
 find_package(CUDAToolkit REQUIRED)
+find_package(OpenMP REQUIRED)
 
 # =====================================================================
 # Find PETSc
@@ -123,6 +124,7 @@ target_compile_options(amgxwrapper
 target_link_libraries(amgxwrapper
     PRIVATE MPI::MPI_CXX
     PRIVATE PkgConfig::PETSC
+    PRIVATE OpenMP::OpenMP_CXX
     PUBLIC amgxwrapper::_amgx
 )
 
